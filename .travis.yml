@@ -7,6 +7,7 @@ before_install:
 - gem update bundler
 - gem install rake
 - bundle install
+- bundle exec rake db:reset
 - bundle exec rake db:setup
 - bundle exec rake db:migrate
 deploy:
