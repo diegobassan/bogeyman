@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/8862470de8a567c72c00/maintainability)](https://codeclimate.com/github/diegobassan/bogeyman/maintainability)
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
