@@ -2,13 +2,13 @@ language: ruby
 cache:
 - bundler
 before_install:
-  - gem update --system
-  - gem install bundler
-  - gem update bundler
-  - gem install rake
-  - bundle install
-  - bundle exec rake db:setup
-  - bundle exec rake db:migrate
+- gem update --system
+- gem install bundler
+- gem update bundler
+- gem install rake
+- bundle install
+- bundle exec rake db:setup
+- bundle exec rake db:migrate
 deploy:
   provider: heroku
   api_key:
@@ -19,4 +19,4 @@ deploy:
   skip_cleanup: true
 notifications:
   slack:
-    secure: AQewopL6T/AaKBEnKMYuGvOf2sNafxqiNRVsp17Sit/gZZgo8Ctc15v6O42Bai4ei1ja7wun9smuoaLLdl9Gc2azhZORphR8bXKYw846iQNAZAXm8Uzg7vvEvetMH9yw7VhZRcnpk3eHhNuiAGRy7D94x7y4YTMHoSO0mRkwlfKN37aRyB5+JVps5d3g8nUz1fsWXPqfsFsR/qFbF8wd/xhvVlsSWrn/Nom3b9P4xTNXMG3fEIXgjnZcYyCd834emG+EbgTScY80HDUpm+CYFNhWVc65V89VQL5gJ13cKq6KVtaPVTuPzTaLZR8hqXUPjvV9nRc+PB38evBZcSmd/eqCvkjOEE1FRTMKqJw8BAa2VWYSqhJF8cTFWqBMNQz0y6cw8zewMNlQ2rJ0sbmQBIiZn3Dq0FOe3Cuecr0vGJ0qsFJA1Hbpu5Drw+OUqpP8Ig5JKKJUloPsHKh1slJfUUGK2qeB9GLqJCNnB22txrNdPWHTaCUZCOQCJhZx3NkY6UqxcrjGE9LIAr+KKTEgJkt8eu5x4yIAju+8vVG8mXNbCrhAdUuj/ifjp3CUfVL9eRzarB1Jkr0h+IYuL0JWIURIKYB81qgTwubjwRPS69IxkUxtRcsuG5fFRjPS2r5pdcld4xUbhk1QIlkhSPileajmEwD7G4G+DsoJUo9QKIs=
+    secure: qfVdZXtdZ8Z8ptcicynuzwfxJcJurLBxqxPFp0eSebcJecMGxlhg5vfZHfxUg+LCMMDPNonb/IgDWtguNe1QWdQgWMAKGlVsqrGeT/Ok8KIDjksY9xK3uiFDt4LKr7L4lQFYFJWJv0LWeUiA8TxPyBDYMaXRUfScTeFXV1N1CfRGg715DhUPVjDE4P52iG2j7tCoc/6PYXrvCj7a5W62J2+sKjWw/+Sspo1kAEF40NATPFVPwv6uyHhkMIzObYE1iLeQpFNelxnRe7ZOY6hvFReH3ahCq4w4f83/1VpAocr+v6L0jiDsYSXLNEBN3AvmUzSKTCZSTGpH8myCqjrgCPGDSUtbTmcd9cl5sDuiUVfgQje2XOief/YT6NiuXU7D+wiwjluoPODhG3+T81dholx2QbDsyC1SVq2+Oltopr9ZQdBHUNTMz8Dy5NmDkRANhrwLpajhOek3fnMahXq3eSMK6D6qGG2VG9rWC+OWiEQV4v+wXqpc9q+NzEFoYla7f9loEbr5H3i3wjTeufyfEuxzTqWRGIN6W+tRTJLOZjDot+U2TxtOw/fGCtzjpQfzksJdli2IrI5yB2Qfq9PtAEz1dFv3HS1BmLtBr8fKbtov/qYaF8L8StOEIfaK1nsp6JDBf2UkKqbK2R6OIghBZNdGVBng8OCWgrYnmRr06sQ=
