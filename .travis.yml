@@ -1,9 +1,6 @@
 language: ruby
 cache:
 - bundler
-script:
-- bundle exec rake db:migrate
-- bundle exec rake db:seed
 deploy:
   provider: heroku
   api_key:
