@@ -3,6 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+# rails-assets.org
+source 'https://rails-assets.org' do
+  # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # Sobrescreve o data-confirm do Rails pelo bootbox.js
+  gem 'rails-assets-bootbox'
+  # A simple, versatile notification library
+  gem 'rails-assets-notifyjs'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
@@ -38,7 +48,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
-
+# Translations for the devise gem.
+gem 'devise-i18n'
+# The font-awesome font bundled as an asset for the rails asset pipeline.
+gem 'font-awesome-rails'
+# Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff.
+gem 'rails-i18n'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+# Translations for the kaminari gem
+gem 'kaminari-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,6 +71,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Better error page for Rack apps
+  gem "better_errors"
+  # Rails >= 3 pry initializer
+  gem 'pry-rails'
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
 end
 
 group :test do
