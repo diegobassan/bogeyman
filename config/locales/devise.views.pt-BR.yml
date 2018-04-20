@@ -27,7 +27,7 @@ pt-BR:
         updated_at: Atualizado em
     models:
       user: Usuário
-  devise:
+  users:
     confirmations:
       confirmed: A sua conta foi confirmada com sucesso.
       new:

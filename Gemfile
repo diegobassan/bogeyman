@@ -78,6 +78,11 @@ group :development do
   gem 'pry-rails'
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
+  # A pack of Rails generators gem plugin that generates Rails 3 and Rails 2 I18n locale files for almost every known locale.
+  gem 'i18n_generators'
+  #A static analysis security vulnerability scanner for Ruby on Rails applications
+  gem 'brakeman', :require => false
+
 end
 
 group :test do

@@ -1,0 +1,22 @@
+pt-BR:
+  welcome:
+    index:
+      oi: Ooooopa
+
+  activerecord:
+    models:
+      user: Usuário  #g #devise
+
+    attributes:
+      user:
+        current_sign_in_at: Atualmente logado em  #g #devise
+        current_sign_in_ip: IP do acesso atual  #g #devise
+        email: Email #g #devise
+        encrypted_password: Senha criptografada  #g #devise
+        last_sign_in_at: Último acesso em  #g #devise
+        last_sign_in_ip: Último IP de acesso  #g #devise
+        remember_created_at: Lembrar criado em  #g #devise
+        reset_password_sent_at: Resetar senha enviado em  #g #devise
+        reset_password_token: Resetar token de senha  #g #devise
+
+

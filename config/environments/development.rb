@@ -61,4 +61,8 @@ Rails.application.configure do
 
   #Better Erros Config
   BetterErrors::Middleware.allow_ip! "10.0.2.2"
+
+  #Mail Catcher Config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 end
