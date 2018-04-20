@@ -12,10 +12,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/acc0b4f9222a46e79fade235b66dfe38)](https://www.codacy.com/app/diegobassan/bogeyman?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=diegobassan/bogeyman&amp;utm_campaign=Badge_Grade)
 [![codebeat badge](https://codebeat.co/badges/7b7436da-1cf2-46b4-b17f-687730b424fe)](https://codebeat.co/projects/github-com-diegobassan-bogeyman-master)
 
-### Dependency Status
-
-[![Dependency Status](https://www.versioneye.com/user/projects/5ad89ec90fb24f54332becef/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5ad89ec90fb24f54332becef)
-
 # README
 
 This README would normally document whatever steps are necessary to get the
