@@ -19,5 +19,10 @@ module Bogeyman
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :'pt-BR'
+
+    #Sentry configurationi
+    Raven.configure do |config|
+      config.dsn = 'https://5f3c072437264ccda1598a0998624197:58bc4b474cdb47d0b887fda059c420be@sentry.io/1192724'
+    end
   end
 end

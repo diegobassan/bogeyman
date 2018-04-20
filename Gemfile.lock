@@ -92,6 +92,8 @@ GEM
     execjs (2.7.0)
     faker (1.8.7)
       i18n (>= 0.7)
+    faraday (0.15.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
@@ -136,6 +138,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -207,6 +210,8 @@ GEM
     selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    sentry-raven (2.7.2)
+      faraday (>= 0.7.6, < 1.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -270,6 +275,7 @@ DEPENDENCIES
   rails-i18n
   sass-rails (~> 5.0)
   selenium-webdriver
+  sentry-raven
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
