@@ -59,6 +59,8 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 # Exception tracking and logging from Ruby to Rollbar
 gem 'rollbar'
+# Test Coveralls
+gem 'coveralls', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

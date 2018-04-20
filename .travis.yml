@@ -1,5 +1,5 @@
 global:
-  - CC_TEST_REPORTER_ID=1bca807ad9c279ffece029f59a238e12e40dd08cecc0b51edbce7e56da0f2977
+  - CC_TEST_REPORTER_ID=cfbb8f4164a971cff03d0be9a248533b4348779a411c095303aece5c83ac22c3
 language: ruby
 cache:
 - bundler

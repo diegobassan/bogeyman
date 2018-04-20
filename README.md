@@ -5,12 +5,13 @@
 ### Test Coverage
 
 [![Coverage Status](https://coveralls.io/repos/github/diegobassan/bogeyman/badge.svg?branch=master)](https://coveralls.io/github/diegobassan/bogeyman?branch=master)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a3cf64933c1afd96838e/test_coverage)](https://codeclimate.com/github/diegobassan/bogeyman/test_coverage)
 
 ### Code Quality
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/8862470de8a567c72c00/maintainability)](https://codeclimate.com/github/diegobassan/bogeyman/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a3cf64933c1afd96838e/maintainability)](https://codeclimate.com/github/diegobassan/bogeyman/maintainability)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/acc0b4f9222a46e79fade235b66dfe38)](https://www.codacy.com/app/diegobassan/bogeyman?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=diegobassan/bogeyman&amp;utm_campaign=Badge_Grade)
-[![codebeat badge](https://codebeat.co/badges/7b7436da-1cf2-46b4-b17f-687730b424fe)](https://codebeat.co/projects/github-com-diegobassan-bogeyman-master)
+[![codebeat badge](https://codebeat.co/badges/c75a28e0-af76-4708-989a-9deed36c2f5e)](https://codebeat.co/projects/github-com-diegobassan-bogeyman-master)
 
 # README
 
