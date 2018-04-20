@@ -57,6 +57,8 @@ gem 'rails-i18n'
 gem 'kaminari'
 # Translations for the kaminari gem
 gem 'kaminari-i18n'
+# Exception tracking and logging from Ruby to Rollbar
+gem 'rollbar'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -80,9 +82,6 @@ group :development do
   gem 'i18n_generators'
   # A static analysis security vulnerability scanner for Ruby on Rails applications
   gem 'brakeman', :require => false
-  # Exception tracking and logging from Ruby to Rollbar
-  gem 'rollbar'
-
 end
 
 group :test do
