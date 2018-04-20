@@ -1,5 +1,7 @@
 global:
   - CC_TEST_REPORTER_ID=cfbb8f4164a971cff03d0be9a248533b4348779a411c095303aece5c83ac22c3
+notifications:
+  email: false
 language: ruby
 cache:
 - bundler
