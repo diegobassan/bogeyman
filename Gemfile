@@ -12,8 +12,6 @@ source 'https://rails-assets.org' do
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
 end
-# Sentry
-gem "sentry-raven"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
@@ -80,8 +78,10 @@ group :development do
   gem 'faker'
   # A pack of Rails generators gem plugin that generates Rails 3 and Rails 2 I18n locale files for almost every known locale.
   gem 'i18n_generators'
-  #A static analysis security vulnerability scanner for Ruby on Rails applications
+  # A static analysis security vulnerability scanner for Ruby on Rails applications
   gem 'brakeman', :require => false
+  # Exception tracking and logging from Ruby to Rollbar
+  gem 'rollbar'
 
 end
 
