@@ -1,7 +1,12 @@
 pt-BR:
+  links:
+    edit: Editar
+    logout: Desconectar
+    are_you_sure: Você tem certeza?
+
   welcome:
     index:
-      oi: Ooooopa0000222
+      oi: Ooooopa
 
   activerecord:
     models:

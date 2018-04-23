@@ -14,6 +14,10 @@ source 'https://rails-assets.org' do
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
+# Ruby on Rails unobtrusive scripting adapter for jQuery
+gem 'jquery-rails'
+# The font-awesome font bundled as an asset for the rails asset pipeline.
+gem 'font-awesome-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
