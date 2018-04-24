@@ -6,7 +6,7 @@ RSpec.describe "user_types/new", type: :view do
       :name => "MyString",
       :description => "MyText",
       :authorizeDiscount => false,
-      :comissionPercentage => 1.5
+      :commissionPercentage => 1.5
     ))
   end
 
@@ -21,7 +21,7 @@ RSpec.describe "user_types/new", type: :view do
 
       assert_select "input[name=?]", "user_type[authorizeDiscount]"
 
-      assert_select "input[name=?]", "user_type[comissionPercentage]"
+      assert_select "input[name=?]", "user_type[commissionPercentage]"
     end
   end
 end

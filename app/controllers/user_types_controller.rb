@@ -1,6 +1,8 @@
 class UserTypesController < ApplicationController
   before_action :set_user_type, only: [:show, :edit, :update, :destroy]
 
+  layout "user"
+
   # GET /user_types
   # GET /user_types.json
   def index
@@ -69,6 +71,6 @@ class UserTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_type_params
-      params.require(:user_type).permit(:name, :description, :authorizeDiscount, :comissionPercentage)
+      params.require(:user_type).permit(:name, :description, :authorizeDiscount, :commissionPercentage)
     end
 end

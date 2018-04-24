@@ -72,12 +72,10 @@
   </head>
 
   <body>
-    <div class="col-sm-6 col-sm-offset-3">
   <% if notice %>
     <script>
       $.notify("<%= notice %>", "success");
     </script>
-  </div>
   <% end %>
     <%= yield %>
   </body>

@@ -1,18 +1,35 @@
 pt-BR:
+  bool_yes: Sim
+  bool_no: Não
+  back: Voltar
+  edit: Editar
+  show: Visualizar
+  delete: Deletar
+  save: Salvar
+  cancel: Cancelar
+
+  views:
+    user_type:
+      edit_user_type: Editar Tipo de Usuário
+      new_user_type: Novo Tipo de Usuário
+
+  buttons:
+    user_type:
+      new_user_type: Novo Tipo de Usuário
+
+
+
   links:
     edit: Editar
     logout: Desconectar
     are_you_sure: Você tem certeza?
-
-  welcome:
-    index:
-      oi: Ooooopa
 
   activerecord:
     models:
       user: Usuário  #g #devise
 
       user_type: Tipo de usuário  #g
+      edit_user_type: Editar Tipo de Usuário
 
     attributes:
       user:
@@ -29,6 +46,6 @@ pt-BR:
 
       user_type:
         authorizeDiscount: Autoriza Desconto  #g
-        comissionPercentage: Percentual de Comissão  #g
+        commissionPercentage: Percentual de Comissão  #g
         description: Descrição  #g
         name: Nome  #g

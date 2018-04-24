@@ -1,37 +1,46 @@
-<%= form_with(model: user_type, local: true) do |form| %>
-  <% if user_type.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user_type.errors.count, "error") %> prohibited this user_type from being saved:</h2>
+<div class="container">
+  <%= form_for(@user_type) do |f| %>
+  <% if @user_type.errors.any? %>
 
-      <ul>
-      <% user_type.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4><%= pluralize(@user_type.errors.count, 'erro') %>
+      <%= t("impedir", count: @user_type.errors.count) %>
+      <%=t :of_save %>.
+    </h4>
+    <ul>
+      <% @user_type.errors.full_messages.each do |message| %>
+      <li><%= message %>.</li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
+
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class:"form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :authorizeDiscount %>
-    <%= form.check_box :authorizeDiscount %>
+  <div class="form-group">
+    <%= f.label :authorizeDiscount %>
+    <%= f.check_box :authorizeDiscount, class:"checkbox" %>
   </div>
-
-  <div class="field">
-    <%= form.label :comissionPercentage %>
-    <%= form.text_field :comissionPercentage %>
+  <div class="form-group">
+    <%= f.label :commissionPercentage %><br>
+    <%= f.number_field :commissionPercentage,step: 0.5, class:"form-control" %>
   </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= button_tag( :class => "btn btn-success") do %>
+    <i class="fa fa-save"></i>
+    <%=t :save %>
+    <% end %>
+    <%= link_to user_types_path, class: "btn btn-default" do %>
+    <i class="fa fa-ban"></i>
+    <%=t :cancel %>
+    <% end %>
   </div>
-<% end %>
+  <% end %>
+</div>

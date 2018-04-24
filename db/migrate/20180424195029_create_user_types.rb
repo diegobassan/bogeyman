@@ -4,7 +4,7 @@ class CreateUserTypes < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :description
       t.boolean :authorizeDiscount
-      t.float :comissionPercentage
+      t.float :commissionPercentage
 
       t.timestamps
     end

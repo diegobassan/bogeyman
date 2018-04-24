@@ -7,13 +7,13 @@ RSpec.describe "user_types/index", type: :view do
         :name => "Name",
         :description => "MyText",
         :authorizeDiscount => false,
-        :comissionPercentage => 2.5
+        :commissionPercentage => 2.5
       ),
       UserType.create!(
         :name => "Name",
         :description => "MyText",
         :authorizeDiscount => false,
-        :comissionPercentage => 2.5
+        :commissionPercentage => 2.5
       )
     ])
   end
