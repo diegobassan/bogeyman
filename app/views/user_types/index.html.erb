@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Authorizediscount</th>
+      <th>Comissionpercentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_types.each do |user_type| %>
+      <tr>
+        <td><%= user_type.name %></td>
+        <td><%= user_type.description %></td>
+        <td><%= user_type.authorizeDiscount %></td>
+        <td><%= user_type.comissionPercentage %></td>
+        <td><%= link_to 'Show', user_type %></td>
+        <td><%= link_to 'Edit', edit_user_type_path(user_type) %></td>
+        <td><%= link_to 'Destroy', user_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Type', new_user_type_path %>

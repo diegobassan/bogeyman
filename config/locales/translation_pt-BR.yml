@@ -12,6 +12,8 @@ pt-BR:
     models:
       user: Usuário  #g #devise
 
+      user_type: Tipo de usuário  #g
+
     attributes:
       user:
         current_sign_in_at: Atualmente logado em  #g #devise
@@ -25,3 +27,8 @@ pt-BR:
         reset_password_token: Resetar token de senha  #g #devise
 
 
+      user_type:
+        authorizeDiscount: Autoriza Desconto  #g
+        comissionPercentage: Percentual de Comissão  #g
+        description: Descrição  #g
+        name: Nome  #g
