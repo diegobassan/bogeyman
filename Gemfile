@@ -69,6 +69,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   # Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites
   gem 'simplecov', require: false, group: :test
+  # JSON formatter for the ruby 1.9+ coverage gem SimpleCov
+  gem 'simplecov-json', :require => false, :group => :test
 end
 
 group :development do
