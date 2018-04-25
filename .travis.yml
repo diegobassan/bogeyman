@@ -12,13 +12,13 @@ before_install:
 - gem install rake
 - bundle install
 - bundle exec rake db:setup
+- bundle exec rake db:migrate
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 after_script:
-- bundle exec rake db:migrate
-- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+- ./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
 script:
   - bundle exec rspec
 deploy:
