@@ -2,11 +2,6 @@
 
 [![Build Status](https://travis-ci.org/diegobassan/bogeyman.svg?branch=master)](https://travis-ci.org/diegobassan/bogeyman)
 
-### Test Coverage
-
-[![Coverage Status](https://coveralls.io/repos/github/diegobassan/bogeyman/badge.svg?branch=master)](https://coveralls.io/github/diegobassan/bogeyman?branch=master)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a3cf64933c1afd96838e/test_coverage)](https://codeclimate.com/github/diegobassan/bogeyman/test_coverage)
-
 ### Code Quality
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a3cf64933c1afd96838e/maintainability)](https://codeclimate.com/github/diegobassan/bogeyman/maintainability)

@@ -30,7 +30,7 @@ class UserTypesController < ApplicationController
 
     respond_to do |format|
       if @user_type.save
-        format.html { redirect_to @user_type, notice: 'User type was successfully created.' }
+        format.html { redirect_to @user_type, notice: t('flash.actions.create.notice', resource_name: @user_type.name )  }
         format.json { render :show, status: :created, location: @user_type }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class UserTypesController < ApplicationController
   def update
     respond_to do |format|
       if @user_type.update(user_type_params)
-        format.html { redirect_to @user_type, notice: 'User type was successfully updated.' }
+        format.html { redirect_to @user_type, notice: t('flash.actions.update.notice', resource_name: @user_type.name ) }
         format.json { render :show, status: :ok, location: @user_type }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class UserTypesController < ApplicationController
   def destroy
     @user_type.destroy
     respond_to do |format|
-      format.html { redirect_to user_types_url, notice: 'User type was successfully destroyed.' }
+      format.html { redirect_to user_types_url, notice: t('flash.actions.destroy.notice', resource_name: @user_type.name ) }
       format.json { head :no_content }
     end
   end

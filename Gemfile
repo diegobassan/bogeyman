@@ -16,8 +16,6 @@ end
 gem 'rails', '~> 5.2.0'
 # Ruby on Rails unobtrusive scripting adapter for jQuery
 gem 'jquery-rails'
-# The font-awesome font bundled as an asset for the rails asset pipeline.
-gem 'font-awesome-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -61,15 +59,8 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 # Exception tracking and logging from Ruby to Rollbar
 gem 'rollbar'
-
-gem "codeclimate-test-reporter", group: :test, require: nil
-
 # RSpec for Rails-3+
 gem 'rspec-rails', '~> 3.7'
-# Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites
-gem 'simplecov', require: false, group: :test
-# JSON formatter for the ruby 1.9+ coverage gem SimpleCov
-gem 'simplecov-json', :require => false, :group => :test
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -86,6 +77,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Better error page for Rack apps
   gem "better_errors"
+  gem "binding_of_caller"
   # Rails >= 3 pry initializer
   gem 'pry-rails'
   # A library for generating fake data such as names, addresses, and phone numbers.
@@ -102,6 +94,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  # JSON formatter for the ruby 1.9+ coverage gem SimpleCov
+  gem 'simplecov-json', :require => false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
