@@ -18,7 +18,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 after_script:
-- ./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
+- ./cc-test-reporter format-coverage --output
 script:
   - bundle exec rspec
 deploy:
