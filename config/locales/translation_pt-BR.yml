@@ -17,8 +17,6 @@ pt-BR:
     user_type:
       new_user_type: Novo Tipo de Usuário
 
-
-
   links:
     edit: Editar
     logout: Desconectar
@@ -42,7 +40,6 @@ pt-BR:
         remember_created_at: Lembrar criado em  #g #devise
         reset_password_sent_at: Resetar senha enviado em  #g #devise
         reset_password_token: Resetar token de senha  #g #devise
-
 
       user_type:
         authorizeDiscount: Autoriza Desconto  #g
