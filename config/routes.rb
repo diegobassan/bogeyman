@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  namespace :manage do
+    resources :users
+  end
   resources :user_types
+
   get 'welcome_user/index'
   devise_for :users , :skip => [:registrations]
   as :user do

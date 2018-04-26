@@ -61,8 +61,6 @@ gem 'kaminari-i18n'
 gem 'rollbar'
 # RSpec for Rails-3+
 gem 'rspec-rails', '~> 3.7'
-# Coveralls.io: Deliver Better Code
-gem 'coveralls', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

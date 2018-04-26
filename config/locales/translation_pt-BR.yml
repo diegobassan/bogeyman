@@ -12,6 +12,9 @@ pt-BR:
     user_type:
       edit_user_type: Editar Tipo de Usuário
       new_user_type: Novo Tipo de Usuário
+    user:
+      edit_user: Editar Usuário
+      new_user: Novo Usuário
 
   buttons:
     user_type:

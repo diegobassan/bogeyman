@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <% if notice %>
+      <div class="alert alert-success alert-dismissible role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= notice %>
+      </div>
+      <% end %>
+      <h3>
+      <%= t("activerecord.models.user", count: 1) %>
+      </h3>
+      <div class="well">
+        <p>
+          <strong>
+          <%= User.human_attribute_name("email")%>:</strong>
+          <%= @user.email %>
+        </p>
+      </div>
+      <%= link_to edit_manage_user_path(@user), class: "btn btn-info" do %>
+      <i class="fa fa-edit"></i>
+      <%=t :edit %>
+      <% end %>
+      <%= link_to manage_users_path, class: "btn btn-default" do %>
+      <i class="fa fa-arrow-left"></i>
+      <%=t :back %>
+      <% end %>
+    </div>
+  </div>
+</div>
