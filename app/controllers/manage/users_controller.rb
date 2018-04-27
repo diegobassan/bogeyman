@@ -1,6 +1,6 @@
 class Manage::UsersController < ApplicationController
   layout "user"
-  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:show,:edit, :update]
 
   def index
     @user = User.all
@@ -31,14 +31,6 @@ class Manage::UsersController < ApplicationController
       redirect_to manage_users_path, notice: t('flash.actions.update.notice', resource_name: @user.email )
     else
       render :edit
-    end
-  end
-
-  def destroy
-    if @user.destroy
-      redirect_to manage_users_path, notice: t('flash.actions.destroy.notice', resource_name: @user.email )
-    else
-      render :index
     end
   end
 
