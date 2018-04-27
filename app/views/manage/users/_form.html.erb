@@ -20,6 +20,16 @@
     <%= f.email_field :email, class:"form-control" %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :password %><br>
+    <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+  </div>
+
   <div class="actions">
     <%= button_tag( :class => "btn btn-success") do %>
     <i class="fa fa-save"></i>

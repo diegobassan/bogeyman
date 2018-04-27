@@ -19,7 +19,7 @@ pre {
   font-size: 11px;
 }
 
-a {
+a:not(.btn) {
   color: #000;
 
   &:visited {
