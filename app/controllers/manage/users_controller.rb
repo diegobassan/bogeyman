@@ -1,5 +1,7 @@
 class Manage::UsersController < ApplicationController
+
   layout "user"
+  
   before_action :set_user, only: [:show,:edit, :update]
 
   def index

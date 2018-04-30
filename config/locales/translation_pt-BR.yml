@@ -14,6 +14,7 @@ pt-BR:
       new_user_type: Novo Tipo de Usuário
     user:
       edit_user: Editar Usuário
+      edit_user_profile: Editar Perfil de Usuário
       new_user: Novo Usuário
 
   buttons:
@@ -22,15 +23,14 @@ pt-BR:
 
   links:
     edit: Editar
+    edit_profile: Editar Perfil
     logout: Desconectar
     are_you_sure: Você tem certeza?
 
   activerecord:
     models:
       user: Usuário  #g #devise
-
       user_type: Tipo de usuário  #g
-      edit_user_type: Editar Tipo de Usuário
 
     attributes:
       user:
