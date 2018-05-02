@@ -22,7 +22,7 @@ class UserTypesController < ApplicationController
     @user_type = UserType.new(user_type_params)
 
     if @user_type.save
-      redirect_to @user_type, notice: t('flash.actions.create.notice', resource_name: @user_type.name )
+      respond_with(@user_type, :location => user_types_url)
     else
         render :new
     end
@@ -30,7 +30,7 @@ class UserTypesController < ApplicationController
 
   def update
     if @user_type.update(user_type_params)
-      redirect_to @user_type, notice: t('flash.actions.update.notice', resource_name: @user_type.name )
+      respond_with(@user_type, :location => user_types_url)
     else
         render :edit
       end
@@ -38,7 +38,7 @@ class UserTypesController < ApplicationController
 
   def destroy
     @user_type.destroy
-      redirect_to user_types_url, notice: t('flash.actions.destroy.notice', resource_name: @user_type.name )
+      respond_with(@user_type, :location => user_types_url)
   end
 
   private
@@ -48,5 +48,8 @@ class UserTypesController < ApplicationController
 
     def user_type_params
       params.require(:user_type).permit(:name, :description, :authorizeDiscount, :commissionPercentage)
+    end
+    def  flash_interpolation_options
+      { resource_name:  @user_type .name}
     end
 end

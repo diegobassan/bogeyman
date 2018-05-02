@@ -1,8 +1,8 @@
 class Manage::UsersController < ApplicationController
 
   layout "user"
-  
-  before_action :set_user, only: [:show,:edit, :update]
+
+  before_action :set_user, only: [:show, :edit, :update]
 
   def index
     @user = User.all
@@ -22,7 +22,7 @@ class Manage::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to manage_users_path, notice: t('flash.actions.create.notice', resource_name: @user.email )
+      respond_with(@user, :location => manage_users_url)
     else
       render :new
     end
@@ -30,13 +30,14 @@ class Manage::UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to manage_users_path, notice: t('flash.actions.update.notice', resource_name: @user.email )
+      respond_with(@user, :location => manage_users_url)
     else
       render :edit
     end
   end
 
   private
+
   def set_user
     @user = User.find(params[:id])
   end
@@ -44,4 +45,9 @@ class Manage::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
+
+  def  flash_interpolation_options
+    { resource_name:  @user .email}
+  end
+
 end

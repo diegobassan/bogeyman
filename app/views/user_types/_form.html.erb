@@ -5,7 +5,7 @@
   <div class="alert alert-warning alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h4><%= pluralize(@user_type.errors.count, 'erro') %>
-      <%= t("impedir", count: @user_type.errors.count) %>
+      <%= t("prevent", count: @user_type.errors.count) %>
       <%=t :of_save %>.
     </h4>
     <ul>

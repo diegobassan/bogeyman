@@ -7,6 +7,11 @@ pt-BR:
   delete: Deletar
   save: Salvar
   cancel: Cancelar
+  of_save: de Salvar
+
+  prevent:
+    one: impediu
+    other: impediram
 
   views:
     user_type:
