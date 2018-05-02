@@ -12,6 +12,8 @@ source 'https://rails-assets.org' do
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
 end
+# New Relic RPM Ruby Agent
+gem 'newrelic_rpm'
 # A set of Rails responders to dry up your application.
 gem 'responders'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
