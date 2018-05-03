@@ -90,6 +90,17 @@ group :development do
   gem 'i18n_generators'
   # A static analysis security vulnerability scanner for Ruby on Rails applications
   gem 'brakeman', :require => false
+  # Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard'
+  # Guard::Bundler automatically install/update your gem bundle when needed
+  gem 'guard-bundler', require: false
+  # Guard::LiveReload automatically reload your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', require: false
+  # Bring in livereload.js into handy Rack middleware
+  gem 'rack-livereload'
+  # Guard::RSpec automatically run your specs (much like autotest)
+  gem 'guard-rspec'
+
 end
 
 group :test do

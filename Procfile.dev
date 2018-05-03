@@ -1,2 +1,3 @@
 web: rails s -b 0.0.0.0 -p 3000 webrick
 mailcatcher: mailcatcher --http-ip 0.0.0.0 -f -v
+guard: bundle exec guard -p -l 10
