@@ -1,4 +1,7 @@
 pt-BR:
+  texts:
+    characters_minimum: Caracteres Mínimos
+
   bool_yes: Sim
   bool_no: Não
   back: Voltar
@@ -36,6 +39,11 @@ pt-BR:
     logout: Desconectar
     login: Entrar
     are_you_sure: Você tem certeza?
+    send: Enviar
+    save: Salvar
+    back: Voltar
+    yes: Sim
+    no: Não
 
   activerecord:
     models:

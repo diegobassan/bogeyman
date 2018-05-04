@@ -1,39 +1,40 @@
-<h2><%= t('views.user.edit_user_profile') %></h2>
+<div class="container">
+  <div class="col-sm-4 col-sm-offset-4">
+    <h1><%= t('views.user.edit_user') %></h1>
+    <hr>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, class: 'form-control'  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div><%= t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email) %></div>
-  <% end %>
+      <div class="form-group">
+        <%= f.label :password %> <i> (<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
+      <div class="form-group">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :current_password %> <i> (<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit t('links.save'), class: 'btn btn-lg btn-block btn-primary' %>
+      </div>
     <% end %>
+    <hr>
+    <%= link_to t('links.back'), :back %>
+    <hr>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit t('.update') %>
-  </div>
-<% end %>
-
-<%= link_to t('devise.shared.links.back'), :back %>
+</div>
