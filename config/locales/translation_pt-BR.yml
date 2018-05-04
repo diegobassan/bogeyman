@@ -9,6 +9,10 @@ pt-BR:
   cancel: Cancelar
   of_save: de Salvar
 
+  placeholder:
+    email: Endereço de Email
+    password: Senha
+
   prevent:
     one: impediu
     other: impediram
@@ -30,6 +34,7 @@ pt-BR:
     edit: Editar
     edit_profile: Editar Perfil
     logout: Desconectar
+    login: Entrar
     are_you_sure: Você tem certeza?
 
   activerecord:

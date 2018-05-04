@@ -12,6 +12,8 @@ source 'https://rails-assets.org' do
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
 end
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
+gem 'simple_form'
 # New Relic RPM Ruby Agent
 gem 'newrelic_rpm'
 # A set of Rails responders to dry up your application.
