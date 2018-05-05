@@ -1,6 +1,10 @@
 pt-BR:
   texts:
     characters_minimum: Caracteres Mínimos
+  simple_form:
+    yes: Sim
+    no: Não
+
 
   bool_yes: Sim
   bool_no: Não
@@ -44,26 +48,20 @@ pt-BR:
     back: Voltar
     yes: Sim
     no: Não
+    new: Novo
 
   activerecord:
     models:
-      user: Usuário  #g #devise
-      user_type: Tipo de usuário  #g
+      user:
+        one: Usuário
+        other: Usuários
+      user_type:
+        one: Tipo de Usuário
+        other: Tipos de Usuário
 
     attributes:
-      user:
-        current_sign_in_at: Atualmente logado em  #g #devise
-        current_sign_in_ip: IP do acesso atual  #g #devise
-        email: Email #g #devise
-        encrypted_password: Senha criptografada  #g #devise
-        last_sign_in_at: Último acesso em  #g #devise
-        last_sign_in_ip: Último IP de acesso  #g #devise
-        remember_created_at: Lembrar criado em  #g #devise
-        reset_password_sent_at: Resetar senha enviado em  #g #devise
-        reset_password_token: Resetar token de senha  #g #devise
-
       user_type:
-        authorizeDiscount: Autoriza Desconto  #g
+        authorizeDiscount: Autoriza Abono  #g
         commissionPercentage: Percentual de Comissão  #g
         description: Descrição  #g
         name: Nome  #g

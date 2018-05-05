@@ -1,11 +1,10 @@
 <div class="container">
-  <h1>
+  <h3>
     <%= t("activerecord.models.user_type", count: @user_types.count) %>
-  </h1>
+  </h3>
   <div class="container" align="right">
-    <%= link_to new_user_type_path, class: "btn btn-success" do %>
+    <%= link_to new_user_type_path, class: "btn btn-success btn-circle" do %>
     <i class="fa fa-plus"></i>
-    <%= t('buttons.user_type.new_user_type') %>
     <% end %>
   </div>
   <table class="table">
@@ -30,21 +29,18 @@
           <%= user_type.description %>
         </td>
         <td>
-          <%= link_to user_type, class: "btn btn-info" do %>
+          <%= link_to user_type, class: "btn btn-primary btn-circle" do %>
           <i class="fa fa-eye"></i>
-          <%=t :show %>
           <% end %>
         </td>
         <td>
-          <%= link_to edit_user_type_path(user_type), class: "btn btn-default" do %>
+          <%= link_to edit_user_type_path(user_type), class: "btn btn-default btn-circle" do %>
           <i class="fa fa-edit"></i>
-          <%=t :edit %>
           <% end %>
         </td>
         <td>
-          <%= link_to user_type, method: :delete, data: { confirm: t('links.are_you_sure') } , class: "btn btn-danger" do %>
+          <%= link_to user_type, method: :delete, data: { confirm: t('links.are_you_sure') } , class: "btn btn-danger btn-circle" do %>
           <i class="fa fa-trash"></i>
-          <%=t :delete %>
           <% end %>
         </td>
       </tr>

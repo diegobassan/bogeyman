@@ -5,13 +5,13 @@ ruby '2.5.1'
 
 # rails-assets.org
 source 'https://rails-assets.org' do
-  # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
-  gem 'rails-assets-bootstrap', '3.3.7'
   # Sobrescreve o data-confirm do Rails pelo bootbox.js
   gem 'rails-assets-bootbox'
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
 end
+# Rails gem of the Bootstrap based admin theme SB Admin 2.
+gem 'bootstrap_sb_admin_base_v2'
 # Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 gem 'simple_form'
 # New Relic RPM Ruby Agent
