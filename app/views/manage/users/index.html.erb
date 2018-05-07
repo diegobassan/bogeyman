@@ -1,11 +1,10 @@
 <div class="container">
-  <h1>
+  <h3>
     <%= t("activerecord.models.user", count: @user.count) %>
-  </h1>
+  </h3>
   <div class="container" align="right">
-    <%= link_to new_manage_user_path, class: "btn btn-success" do %>
+    <%= link_to new_manage_user_path, class: "btn btn-success btn-circle" do %>
     <i class="fa fa-plus"></i>
-    <%= t('views.user.new_user') %>
     <% end %>
   </div>
 
@@ -25,15 +24,13 @@
           <%= user.email %>
         </td>
         <td>
-          <%= link_to manage_user_path(user), class: "btn btn-info" do %>
+          <%= link_to manage_user_path(user), class: "btn btn-primary btn-circle" do %>
           <i class="fa fa-eye"></i>
-          <%=t :show %>
           <% end %>
         </td>
         <td>
-          <%= link_to edit_manage_user_path(user), class: "btn btn-default" do %>
+          <%= link_to edit_manage_user_path(user), class: "btn btn-default btn-circle" do %>
           <i class="fa fa-edit"></i>
-          <%=t :edit %>
           <% end %>
         </td>
       </tr>
