@@ -43,7 +43,7 @@ class Manage::UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :userType_id, :isActive)
   end
 
   def  flash_interpolation_options

@@ -25,6 +25,8 @@ pt-BR:
         unconfirmed_email: E-mail não confirmado
         unlock_token: Token de desbloqueio
         updated_at: Atualizado em
+        userType: Tipo de Usuário
+        isActive: Ativo
     models:
       user: Usuário
   users:

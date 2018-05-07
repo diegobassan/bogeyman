@@ -28,6 +28,10 @@
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
   </div>
+  <div class="form-group">
+    <%= f.label :isActive %>
+    <%= f.check_box :isActive, class:"checkbox" %>
+  </div>
    <div class="field">
     <%= f.label :userType %><br />
     <%= f.select :userType_id, UserType.pluck(:name, :id) %>

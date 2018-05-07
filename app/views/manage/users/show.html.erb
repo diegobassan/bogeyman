@@ -16,6 +16,16 @@
           <%= User.human_attribute_name("email")%>:</strong>
           <%= @user.email %>
         </p>
+        <p>
+          <strong>
+          <%= User.human_attribute_name("userType")%>:</strong>
+          <%= @user.userType.name %>
+        </p>
+        <p>
+          <strong>
+          <%= User.human_attribute_name("isActive")%>:</strong>
+          <%= human_boolean(@user.isActive) %>
+        </p>
       </div>
       <%= link_to edit_manage_user_path(@user), class: "btn btn-info" do %>
       <i class="fa fa-edit"></i>

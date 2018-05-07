@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base
 
   respond_to :html, :json
   responders :flash
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  protected
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation])
+    devise_parameter_sanitizer. permit(:sign_in, keys: [:email, :password, :password_confirmation])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:isActive, :userType_id, :email, :password, :password_confirmation, :current_password])
+  end
 end

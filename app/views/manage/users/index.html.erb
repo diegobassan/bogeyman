@@ -14,6 +14,12 @@
         <th>
           <%= User.human_attribute_name("email")%>
         </th>
+        <th>
+          <%= User.human_attribute_name("userType")%>
+        </th>
+        <th>
+          <%= User.human_attribute_name("isActive")%>
+        </th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -22,6 +28,12 @@
       <tr>
         <td>
           <%= user.email %>
+        </td>
+        <td>
+          <%= user.userType.name %>
+        </td>
+        <td>
+          <%= human_boolean(user.isActive) %>
         </td>
         <td>
           <%= link_to manage_user_path(user), class: "btn btn-primary btn-circle" do %>
