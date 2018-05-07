@@ -29,6 +29,10 @@
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
   </div>
+   <div class="field">
+    <%= f.label :userType %><br />
+    <%= f.select :userType_id, UserType.pluck(:name, :id) %>
+  </div>
 
   <div class="actions">
     <%= button_tag( :class => "btn btn-success") do %>
