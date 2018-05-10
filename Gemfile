@@ -9,9 +9,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
+  # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
+  gem 'rails-assets-bootstrap'
 end
-# Rails gem of the Bootstrap based admin theme SB Admin 2.
-gem 'bootstrap_sb_admin_base_v2'
 # Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 gem 'simple_form'
 # New Relic RPM Ruby Agent

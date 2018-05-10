@@ -1,42 +1,49 @@
-  <%= form_for([:manage,@user]) do |f| %>
-  <% if @user.errors.any? %>
-
-  <div class="alert alert-warning alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h4><%= pluralize(@user.errors.count, 'erro') %>
-      <%= t("prevent", count: @user.errors.count) %>
-      <%=t :of_save %>.
-    </h4>
-    <ul>
-      <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %>.</li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
+<%= form_for([:manage,@user]) do |f| %>
+<% if @user.errors.any? %>
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4><%= pluralize(@user.errors.count, 'erro') %>
+  <%= t("prevent", count: @user.errors.count) %>
+  <%=t :of_save %>.
+  </h4>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %>.</li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="row">
   <div class="form-group">
     <%= f.label :email %><br>
     <%= f.email_field :email, class:"form-control" %>
   </div>
-
+</div>
+<div class="row">
   <div class="form-group">
     <%= f.label :password %><br>
     <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
   </div>
-
+</div>
+<div class="row">
   <div class="form-group">
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
   </div>
+</div>
+<div class="row">
   <div class="form-group">
     <%= f.label :isActive %>
     <%= f.check_box :isActive, class:"checkbox" %>
   </div>
-   <div class="field">
+</div>
+<div class="row">
+  <div class="form-group">
     <%= f.label :userType %><br />
     <%= f.select :userType_id, UserType.pluck(:name, :id) %>
   </div>
-
+</div>
+<div class="row">
   <div class="actions">
     <%= button_tag( :class => "btn btn-success") do %>
     <i class="fa fa-save"></i>
@@ -47,4 +54,5 @@
     <%=t :cancel %>
     <% end %>
   </div>
-  <% end %>
+</div>
+<% end %>
