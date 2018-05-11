@@ -2,20 +2,24 @@
   <h3>
   <%= t("activerecord.models.user", count: @user.count) %>
   </h3>
-  <div class="container-fluid hidden-xs" align="right">
+
+      <div class="hidden-xs" align="right">
     <%= link_to new_manage_user_path, class: "btn btn-success" do %>
     <i class="fa fa-plus"></i>
     <%=t :new %>
     <% end %>
   </div>
-<div class="container-fluid visible-xs" align="left">
-    <%= link_to new_manage_user_path, class: "btn btn-success btn-xs" do %>
+
+<div class="visible-xs" align="right">
+    <%= link_to new_manage_user_path, class: "btn btn-success" do %>
     <i class="fa fa-plus"></i>
     <%=t :new %>
     <% end %>
   </div>
 
-  <table class="table">
+  <br>
+
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>
@@ -32,23 +36,29 @@
     </thead>
     <tbody>
       <% @user.each do |user| %>
-      <tr>
+
+      <% if user.isActive %>
+        <tr>
+      <% else %>
+        <tr class="warning">
+      <% end %>
+
         <td>
           <%= user.email %>
         </td>
         <td>
           <%= user.userType.name %>
         </td>
-        <td class="hidden-xs">
+        <td class="hidden-xs" >
           <%= human_boolean(user.isActive) %>
         </td>
-        <td class="hidden-xs">
-          <%= link_to manage_user_path(user), class: "btn btn-primary" do %>
+        <td class="hidden-xs text-center">
+          <%= link_to manage_user_path(user), class: "btn btn-info" do %>
           <i class="fa fa-eye"></i>
           <%=t :show %>
           <% end %>
         </td>
-        <td class="hidden-xs">
+        <td class="hidden-xs text-center">
           <%= link_to edit_manage_user_path(user), class: "btn btn-default" do %>
           <i class="fa fa-edit"></i>
           <%=t :edit %>
@@ -66,6 +76,8 @@
                 <i class="fa fa-eye"> <%= t('show') %></i>
                 <% end %>
               </li>
+
+              <li role="separator" class="divider"></li>
 
               <li>
                 <%= link_to edit_manage_user_path(user) do %>

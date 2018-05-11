@@ -40,12 +40,14 @@
 <div class="row">
   <div class="form-group">
     <%= f.label :userType %><br />
-    <%= f.select :userType_id, UserType.pluck(:name, :id) %>
+    <%= f.collection_select :userType_id, UserType.all, :id, :name, {}, { class: "form-control" } %>
   </div>
 </div>
+
+
 <div class="row">
   <div class="actions">
-    <%= button_tag( :class => "btn btn-success") do %>
+    <%= button_tag( :class => "btn btn-primary") do %>
     <i class="fa fa-save"></i>
     <%=t :save %>
     <% end %>
