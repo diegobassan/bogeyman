@@ -58,12 +58,19 @@
           <%=t :show %>
           <% end %>
         </td>
-        <td class="hidden-xs text-center">
+
+<td class="hidden-xs text-center">
+        <% if user != current_user %>
+
           <%= link_to edit_manage_user_path(user), class: "btn btn-default" do %>
           <i class="fa fa-edit"></i>
           <%=t :edit %>
           <% end %>
+
+        <% end %>
         </td>
+
+
         <td class="visible-xs">
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -77,13 +84,19 @@
                 <% end %>
               </li>
 
+
+              <% if user != current_user %>
+
               <li role="separator" class="divider"></li>
 
-              <li>
+
+
+                <li>
                 <%= link_to edit_manage_user_path(user) do %>
                 <i class="fa fa-edit"> <%= t('edit') %></i>
                 <% end %>
               </li>
+              <% end %>
 
             </ul>
           </div>

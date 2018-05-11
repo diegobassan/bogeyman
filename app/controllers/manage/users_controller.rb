@@ -19,7 +19,7 @@ class Manage::UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(user_params_create)
 
     if @user.save
       respond_with(@user, :location => manage_users_url)
@@ -29,7 +29,7 @@ class Manage::UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    if @user.update(user_params_update)
       respond_with(@user, :location => manage_users_url)
     else
       render :edit
@@ -42,7 +42,11 @@ class Manage::UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def user_params
+  def user_params_update
+    params.require(:user).permit(:email, :userType_id, :isActive)
+  end
+
+  def user_params_create
     params.require(:user).permit(:email, :password, :password_confirmation, :userType_id, :isActive)
   end
 
