@@ -46,6 +46,7 @@ pt-BR:
       timeout: A sua sessão expirou, por favor, faça login novamente para continuar.
       unauthenticated: Para continuar, faça login ou registre-se.
       unconfirmed: Antes de continuar, confirme a sua conta.
+      deleted_account: "A conta está inativada."
     mailer:
       confirmation_instructions:
         action: Confirmar minha conta

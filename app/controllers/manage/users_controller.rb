@@ -5,7 +5,7 @@ class Manage::UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    @user = User.all
+    @user = User.all.order(:email)
   end
 
   def show

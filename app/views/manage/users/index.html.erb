@@ -1,25 +1,22 @@
 <div class="container">
   <h3>
-  <%= t("activerecord.models.user", count: @user.count) %>
+    <%= t("activerecord.models.user", count: @user.count) %>
   </h3>
-
-      <div class="hidden-xs" align="right">
+   <br>
+  <div class="hidden-xs" align="right">
     <%= link_to new_manage_user_path, class: "btn btn-success" do %>
     <i class="fa fa-plus"></i>
     <%=t :new %>
     <% end %>
   </div>
-
-<div class="visible-xs" align="right">
+  <div class="visible-xs" align="right">
     <%= link_to new_manage_user_path, class: "btn btn-success" do %>
     <i class="fa fa-plus"></i>
     <%=t :new %>
     <% end %>
   </div>
-
   <br>
-
-  <table class="table table-bordered">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>
@@ -36,74 +33,61 @@
     </thead>
     <tbody>
       <% @user.each do |user| %>
-
       <% if user.isActive %>
-        <tr>
-      <% else %>
-        <tr class="warning">
-      <% end %>
-
-        <td>
-          <%= user.email %>
-        </td>
-        <td>
-          <%= user.userType.name %>
-        </td>
-        <td class="hidden-xs" >
-          <%= human_boolean(user.isActive) %>
-        </td>
-        <td class="hidden-xs text-center">
-          <%= link_to manage_user_path(user), class: "btn btn-info" do %>
-          <i class="fa fa-eye"></i>
-          <%=t :show %>
+      <tr>
+        <% else %>
+        <tr class="danger">
           <% end %>
-        </td>
-
-<td class="hidden-xs text-center">
-        <% if user != current_user %>
-
-          <%= link_to edit_manage_user_path(user), class: "btn btn-default" do %>
-          <i class="fa fa-edit"></i>
-          <%=t :edit %>
-          <% end %>
-
-        <% end %>
-        </td>
-
-
-        <td class="visible-xs">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Ações
-            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-              <li>
-                <%= link_to manage_user_path(user) do %>
-                <i class="fa fa-eye"> <%= t('show') %></i>
-                <% end %>
-              </li>
-
-
-              <% if user != current_user %>
-
-              <li role="separator" class="divider"></li>
-
-
-
-                <li>
-                <%= link_to edit_manage_user_path(user) do %>
-                <i class="fa fa-edit"> <%= t('edit') %></i>
-                <% end %>
-              </li>
+          <td>
+            <%= user.email %>
+          </td>
+          <td>
+            <%= user.userType.name %>
+          </td>
+          <td class="hidden-xs" >
+            <%= human_boolean(user.isActive) %>
+          </td>
+          <td class="hidden-xs text-center">
+            <%= link_to manage_user_path(user), class: "btn btn-info" do %>
+            <i class="fa fa-eye"></i>
+            <%=t :show %>
+            <% end %>
+          </td>
+          <td class="hidden-xs text-center">
+            <% if user != current_user %>
+              <%= link_to edit_manage_user_path(user), class: "btn btn-default" do %>
+              <i class="fa fa-edit"></i>
+              <%=t :edit %>
               <% end %>
-
-            </ul>
-          </div>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-</div>
+            <% end %>
+          </td>
+          <td class="visible-xs">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <%= t('actions') %>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                <li>
+                  <%= link_to manage_user_path(user) do %>
+                  <i class="fa fa-eye"> <%= t('show') %></i>
+                  <% end %>
+                </li>
+                <% if user != current_user %>
+                  <li role="separator" class="divider">
+                  </li>
+                  <li>
+                    <%= link_to edit_manage_user_path(user) do %>
+                    <i class="fa fa-edit"> <%= t('edit') %></i>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+  </div>
