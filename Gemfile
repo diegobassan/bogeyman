@@ -90,8 +90,6 @@ group :development do
   gem 'faker'
   # A pack of Rails generators gem plugin that generates Rails 3 and Rails 2 I18n locale files for almost every known locale.
   gem 'i18n_generators'
-  # A static analysis security vulnerability scanner for Ruby on Rails applications
-  gem 'brakeman', :require => false
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard'
   # Guard::Bundler automatically install/update your gem bundle when needed
