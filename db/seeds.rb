@@ -28,7 +28,8 @@ user = User.new(
     email: 'admin@admin.com',
     password: '123456',
     password_confirmation: '123456',
-    userType_id: '1'
+    userType_id: '1',
+    isActive: true
   )
   user.save!
   
@@ -36,6 +37,7 @@ user = User.new(
     email: 'user@user.com',
     password: '123456',
     password_confirmation: '123456',
-    userType_id: '1'
+    userType_id: '1',
+    isActive: true
   )
   user.save!
