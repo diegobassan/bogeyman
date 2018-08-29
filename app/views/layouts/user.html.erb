@@ -5,10 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bogeyman</title>
+</head>
+<body>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <% if user_signed_in? %>
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -254,19 +259,30 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
+            </div>
         </nav>
+
+<!-- /.Refatorar -->
+<div>a</div>
+<div>a</div>
+
     <% end %>
     <%= stylesheet_link_tag    'user', media: 'all'%>
     <%= javascript_include_tag 'user'%>
-  </head>
 
-  <body>
     <% if notice %>
     <script>
-      $.notify("<%= notice %>", "success");
+      $.notify("<%= notice %>", {
+      className:'success',
+      clickToHide: true,
+      autoHide: true,
+      globalPosition: 'top center'
+    });
     </script>
     <% end %>
+
     <%= yield %>
+
   </body>
   </html>
 
