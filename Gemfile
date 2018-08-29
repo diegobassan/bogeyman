@@ -9,9 +9,11 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
-  # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
-  gem 'rails-assets-bootstrap'
 end
+
+# Rails gem of the Bootstrap based admin theme SB Admin 2.
+gem 'bootstrap_sb_admin_base_v2'
+
 # Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 gem 'simple_form'
 # New Relic RPM Ruby Agent
@@ -90,17 +92,6 @@ group :development do
   gem 'faker'
   # A pack of Rails generators gem plugin that generates Rails 3 and Rails 2 I18n locale files for almost every known locale.
   gem 'i18n_generators'
-  # Guard is a command line tool to easily handle events on file system modifications.
-  gem 'guard'
-  # Guard::Bundler automatically install/update your gem bundle when needed
-  gem 'guard-bundler', require: false
-  # Guard::LiveReload automatically reload your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', require: false
-  # Bring in livereload.js into handy Rack middleware
-  gem 'rack-livereload'
-  # Guard::RSpec automatically run your specs (much like autotest)
-  gem 'guard-rspec'
-
 end
 
 group :test do

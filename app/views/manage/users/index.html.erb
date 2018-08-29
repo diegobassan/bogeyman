@@ -3,20 +3,14 @@
     <%= t("activerecord.models.user", count: @user.count) %>
   </h3>
    <br>
-  <div class="hidden-xs" align="right">
-    <%= link_to new_manage_user_path, class: "btn btn-success" do %>
+  <div class="container" align="right">
+    <%= link_to new_manage_user_path, class: "btn btn-success btn-lg" do %>
     <i class="fa fa-plus"></i>
-    <%=t :new %>
-    <% end %>
-  </div>
-  <div class="visible-xs" align="right">
-    <%= link_to new_manage_user_path, class: "btn btn-success" do %>
-    <i class="fa fa-plus"></i>
-    <%=t :new %>
+    <%= t(:new) %>
     <% end %>
   </div>
   <br>
-  <table class="table table-hover">
+  <table class="table">
     <thead>
       <tr>
         <th>
@@ -44,20 +38,20 @@
           <td>
             <%= user.userType.name %>
           </td>
-          <td class="hidden-xs" >
+          <td>
             <%= human_boolean(user.isActive) %>
           </td>
-          <td class="hidden-xs text-center">
-            <%= link_to manage_user_path(user), class: "btn btn-info" do %>
+          <td>
+            <%= link_to manage_user_path(user), class: "btn btn-primary" do %>
             <i class="fa fa-eye"></i>
-            <%=t :show %>
+            <%= t(:show) %>
             <% end %>
           </td>
-          <td class="hidden-xs text-center">
+          <td>
             <% if user != current_user %>
               <%= link_to edit_manage_user_path(user), class: "btn btn-default" do %>
               <i class="fa fa-edit"></i>
-              <%=t :edit %>
+              <%= t(:edit) %>
               <% end %>
             <% end %>
           </td>
