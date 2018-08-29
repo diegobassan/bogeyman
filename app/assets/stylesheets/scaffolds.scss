@@ -19,7 +19,7 @@ pre {
   font-size: 11px;
 }
 
-a:not(.btn) {
+.a {
   color: #000;
 
   &:visited {
@@ -30,7 +30,10 @@ a:not(.btn) {
     color: #fff;
     background-color: #000;
   }
+
+  
 }
+
 
 th {
   padding-bottom: 5px;

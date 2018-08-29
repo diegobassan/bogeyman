@@ -14,3 +14,7 @@
  *= require bootstrap_sb_admin_base_v2
  */
 
+ .btn {
+    width: 120px;
+ }
+

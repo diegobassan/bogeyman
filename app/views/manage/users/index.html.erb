@@ -2,15 +2,15 @@
   <h3>
     <%= t("activerecord.models.user", count: @user.count) %>
   </h3>
-   <br>
-  <div class="container" align="right">
-    <%= link_to new_manage_user_path, class: "btn btn-success btn-lg" do %>
+  <table class="table">
+<thead>
+<td>
+<%= link_to new_manage_user_path, class: "btn btn-success" do %>
     <i class="fa fa-plus"></i>
     <%= t(:new) %>
     <% end %>
-  </div>
-  <br>
-  <table class="table">
+</td>
+</thead>
     <thead>
       <tr>
         <th>
