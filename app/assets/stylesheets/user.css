@@ -18,3 +18,7 @@
     width: 120px;
  }
 
+ .table {
+    word-wrap: break-word;
+ }
+
