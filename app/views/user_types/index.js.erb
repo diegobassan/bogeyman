@@ -1,0 +1,2 @@
+$('#userTypes_details').html('<%= escape_javascript(raw(render 'userTypes')) %>');
+$('#paginator').html('<%= escape_javascript(paginate(@user_types, :remote=>true).to_s)%>');
