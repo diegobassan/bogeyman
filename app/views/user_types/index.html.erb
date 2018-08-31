@@ -58,5 +58,10 @@
       <% end %>
     </tbody>
   </table>
-  <br>
+  <div>
+      <%= paginate @user_types %>
+      <br>
+      <%= page_entries_info @user_types %>
+  </div>
 </div>
+

@@ -5,7 +5,7 @@ class UserTypesController < ApplicationController
   before_action :set_user_type, only: [:show, :edit, :update, :destroy]
 
   def index
-    @user_types = UserType.all
+    @user_types = UserType.page(params[:page]).per(6)
   end
 
   def show
